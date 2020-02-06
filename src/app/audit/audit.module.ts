@@ -4,6 +4,8 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
+import { SharedModule } from '../shared/shared.module';
+
 import { AuditPageRoutingModule } from './audit-routing.module';
 
 import { AuditPage } from './audit.page';
@@ -13,7 +15,8 @@ import { AuditPage } from './audit.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    AuditPageRoutingModule
+    AuditPageRoutingModule,
+	SharedModule
   ],
   declarations: [AuditPage]
 })

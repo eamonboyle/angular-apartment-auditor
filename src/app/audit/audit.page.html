@@ -3,10 +3,15 @@
 	<ion-buttons slot="start">
 		<ion-back-button></ion-back-button>
 	</ion-buttons>
-    <ion-title>audit</ion-title>
+    <ion-title>Audit # {{model.number}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-
+<ion-content class="ion-padding">
+	<form [formGroup]="form">
+		<formly-form [model]="model" [fields]="fields" [options]="options" [form]="form"></formly-form>
+        <ion-button shape="round" (click)="submit()" expand="full" color="primary">
+            Save
+        </ion-button>
+	</form>
 </ion-content>
