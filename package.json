@@ -28,6 +28,7 @@
     "@ngx-formly/ionic": "^5.0.0",
     "@ngx-formly/schematics": "^5.5.11",
     "@types/lodash": "^4.14.149",
+    "cordova-plugin-camera": "^4.1.0",
     "core-js": "^2.5.4",
     "firebase": "^7.8.0",
     "lodash-es": "^4.17.15",
@@ -62,5 +63,10 @@
     "tslint": "~5.15.0",
     "typescript": "~3.4.3"
   },
-  "description": "An Ionic project"
+  "description": "An Ionic project",
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-camera": {}
+    }
+  }
 }
