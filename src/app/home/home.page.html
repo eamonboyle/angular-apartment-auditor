@@ -10,7 +10,9 @@
 </ion-header>
 
 <ion-content>
-    <ion-card class="welcome-card" *ngFor="let appointment of appointments$ | async">
+    <ion-card class="welcome-card" 
+		[routerLink]="['/audit', appointment.key]"
+		*ngFor="let appointment of appointments$ | async">
         <ion-card-header>
             <ion-badge class="card-end"[attr.color]="appointment.color">{{appointment.label}}</ion-badge>
             <ion-card-title>Apt {{appointment.number}}</ion-card-title>
