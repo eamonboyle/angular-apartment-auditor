@@ -4,10 +4,16 @@
 		<ion-back-button></ion-back-button>
 	</ion-buttons>
     <ion-title>Audit # {{model.number}}</ion-title>
+	<ion-button slot="end">
+		<ion-icon class="ion-padding" name="camera" (click)="openCamera()"></ion-icon>
+	</ion-button>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="ion-padding">
+	<div class="image-container" *ngFor="let photo of base64Images">
+        <img width="30" height="30" [src]="photo" />
+    </div>
 	<form [formGroup]="form">
 		<formly-form [model]="model" [fields]="fields" [options]="options" [form]="form"></formly-form>
         <ion-button shape="round" (click)="submit()" expand="full" color="primary">
